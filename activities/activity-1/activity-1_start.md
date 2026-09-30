@@ -41,7 +41,7 @@ We recommend running all workshop exercises in a Python virtual environment, jus
 
 #### Requirements
 Dependencies live in `requirements.txt` and match what you installed in the venv:
-- mlflow==2.15.1
+- mlflow>=2.15.1
 - pandas>=2.0.0
 - scikit-learn>=1.3.0
 - numpy>=1.24.0
@@ -54,7 +54,7 @@ MLflow is commonly used to track model-training experiments, but here we use it 
 
 ⌨️ You can run MLFlow by either:
 - Run the UI in the foreground (defaults to local paths like `./mlruns`):
-  - `mlflow ui --port 5000 --backend-store-uri file:./mlruns`
+  - `mlflow ui --port 5000 --backend-store-uri sqlite:///mlflow.db`
   - Open http://localhost:5000
   - You can stop it with `Ctrl+c`
 - OR run in the background with logs:
